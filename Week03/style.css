@@ -1,0 +1,21 @@
+.person {
+  display: inline-block;
+  text-align: center;
+}
+
+.person img {
+  border-radius: 50%;
+  -webkit-box-shadow: #777279 1px 1px;
+          box-shadow: #777279 1px 1px;
+}
+
+.person button {
+  background-color: #0ece0e;
+  width: 100%;
+}
+
+.person * {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=style.css.map */
