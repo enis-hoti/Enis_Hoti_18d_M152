@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <button onclick="playVid()" type="button">Play Video</button>
+    <button onclick="pauseVid()" type="button">Pause Video</button><br> 
+    
+    <br><button onclick="enableLoop()" type="button">Enable loop</button>
+    <button onclick="disableLoop()" type="button">Disable loop</button>
+    <button onclick="checkLoop()" type="button">Check loop status</button><br>  
+
+    <br><button onclick="getPlaySpeed()" type="button">What is the playback speed?</button><br>
+    <button onclick="setPlaySpeedOn_05()" type="button">Set video on 0.5x speed</button><br>
+    <button onclick="setPlaySpeedOn_10()" type="button">Set video on 1x speed</button><br> 
+    <button onclick="setPlaySpeedOn_15()" type="button">Set video on 1.5x speed</button><br>
+    <button onclick="setPlaySpeedOn_20()" type="button">Set video on 2x speed</button><br> 
+
+    <br><button onclick="getVolume()" type="button">What is the volume?</button><br>
+    <button onclick="set25Volume()" type="button">Set volume to 0.25</button><br>
+    <button onclick="set50Volume()" type="button">Set volume to 0.5</button><br>
+    <button onclick="set75Volume()" type="button">Set volume to 0.75</button><br>
+    <button onclick="setFullVolume()" type="button">Set volume to 1.0</button><br> 
+    
+    <video id = "Video" width="640" height="480" controls>
+        <source src="Video.mp4" type="Video/mp4">
+        <source src="Video.ogg" type="Video/ogg">
+        Your browser does not support the video tag.
+      </video>
+      
+      <script> 
+        var vid = document.getElementById("Video"); 
+        
+        function playVid() { 
+          vid.play(); 
+        } 
+        
+        function pauseVid() { 
+          vid.pause(); 
+        } 
+
+        function enableLoop() { 
+            vid.loop = true;
+            vid.load();
+        } 
+
+        function disableLoop() { 
+             vid.loop = false;
+            vid.load();
+        } 
+
+        function checkLoop() { 
+             alert(vid.loop);
+        } 
+
+        function getPlaySpeed() { 
+            alert(vid.playbackRate);
+        } 
+
+            function setPlaySpeedOn_05() { 
+        vid.playbackRate = 0.5;
+        } 
+        
+        function setPlaySpeedOn_1() { 
+        vid.playbackRate = 1;
+        } 
+        
+        function setPlaySpeedOn_15() { 
+        vid.playbackRate = 1.5;
+        } 
+        
+        function setPlaySpeedOn_20() { 
+        vid.playbackRate = 2;
+        } 
+        function getVolume() { 
+            alert(vid.volume);
+        } 
+  
+        function set25Volume() { 
+            vid.volume = 0.25;
+        } 
+
+        function set50Volume() { 
+            vid.volume = 0.50;
+        } 
+
+        function set75Volume() { 
+            vid.volume = 0.75;
+        } 
+  
+        function setFullVolume() { 
+            vid.volume = 1.0;
+        } 
+        </script> 
+
+</body>
+</html>
